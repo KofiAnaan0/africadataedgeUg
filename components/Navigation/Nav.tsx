@@ -3,6 +3,7 @@
 import { navLinks } from "@/constants/constant";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // Add this import
 import React, { useEffect, useState } from "react";
 import { RiMenuFill } from "react-icons/ri";
 import { Button } from "../ui/Button";
@@ -14,6 +15,7 @@ type Props = {
 
 const Nav = ({ navOpen, handleshowModel }: Props) => {
 	const [navBg, setNavBg] = useState(false);
+	const pathname = usePathname(); // Get current path
 
 	useEffect(() => {
 		const handleNavBg = () => {
@@ -50,15 +52,20 @@ const Nav = ({ navOpen, handleshowModel }: Props) => {
 
 				{/* nav links */}
 				<div className="hidden lg:flex space-x-4 items-center justify-center py-3 px-6 ">
-					{navLinks.map((link) => (
-						<Link
-							href={link.url}
-							key={link.id}
-							className="text-[#EFEEEA] font-normal text-sm hover:text-[#EFEEEA]/95 hover:rotate-1 hover:scale-110 transition duration-100"
-						>
-							{link.label}
-						</Link>
-					))}
+					{navLinks.map((link) => {
+						const isActive = pathname === link.url;
+						return (
+							<Link
+								href={link.url}
+								key={link.id}
+								className={`text-[#EFEEEA] font-normal text-sm hover:text-[#EFEEEA]/95 hover:rotate-1 hover:scale-110 transition duration-100 relative pb-1 ${
+									isActive ? "after:scale-x-100" : "after:scale-x-0"
+								} after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-[#EFEEEA] after:transition-transform after:duration-300 hover:after:scale-x-100`}
+							>
+								{link.label}
+							</Link>
+						);
+					})}
 				</div>
 
 				{/* CAT */}

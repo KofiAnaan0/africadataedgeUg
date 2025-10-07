@@ -9,16 +9,21 @@ import ura from "@/public/Brand_logos/ura.png";
 export const navLinks = [
 	{
 		id: 1,
+		label: "Home",
+		url: "/",
+	},
+	{
+		id: 2,
 		label: "Our Services",
 		url: "/product",
 	},
 	{
-		id: 2,
+		id: 3,
 		label: "Get to Know Us",
 		url: "#",
 	},
 	{
-		id: 3,
+		id: 4,
 		label: "Contact",
 		url: "#",
 	},

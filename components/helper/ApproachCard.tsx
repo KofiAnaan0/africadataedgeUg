@@ -6,6 +6,7 @@ import P from "../ui/P";
 import { Button } from "../ui/Button";
 import Image from "next/image";
 import { ApproachType } from "@/types/approachType";
+import Link from "next/link";
 
 interface ApproachProps extends ApproachType {
 	reversed: boolean;
@@ -13,6 +14,7 @@ interface ApproachProps extends ApproachType {
 
 const ApproachCard = ({
 	title,
+	index,
 	description,
 	imageUrl,
 	reversed,
@@ -37,7 +39,9 @@ const ApproachCard = ({
 
 					{/* CTA */}
 					<div className="flex items-start justify-start w-full mt-8 space-x-4">
-						<Button>View Product</Button>
+						<Link href={`/product#${index}`}>
+							<Button>View Product</Button>
+						</Link>
 						<Button
 							variant="outline"
 							onClick={() => (window.location.href = "tel:+12244643952")}

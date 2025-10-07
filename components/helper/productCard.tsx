@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import H3 from "../ui/H3";
 import { Button } from "../ui/Button";
@@ -34,7 +36,10 @@ const ProductCard = ({
 
 			{/* CTA */}
 			<div className="flex items-center justify-center mt-auto">
-				<Button style={{ backgroundColor: textColor, color: color }}>
+				<Button
+					style={{ backgroundColor: textColor, color: color }}
+					onClick={() => (window.location.href = "tel:+12244643952")}
+				>
 					Call Us
 				</Button>
 			</div>

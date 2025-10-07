@@ -241,6 +241,25 @@ export const Enterprise = [
 	},
 ];
 
+export const analytics = [
+	{
+		index: 1,
+		title: "Analytics Plus",
+		description: [
+			"Out-of-the-box analytics for popular IT applications",
+			"AI-powered analytics assistant",
+			"Secure, real-time collaboration",
+			"Trend forecasting",
+			"Data alerts",
+			"Embedded analytics",
+			"Data import from cloud and local databases",
+			"Powerful formula engine for custom functions",
+		],
+		color: "#0E185F",
+		textColor: "white",
+	},
+];
+
 export const EndpointManagement = [
 	{
 		index: 1,
