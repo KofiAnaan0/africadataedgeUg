@@ -22,11 +22,6 @@ export const navLinks = [
 		label: "Get to Know Us",
 		url: "/about",
 	},
-	{
-		id: 4,
-		label: "Contact",
-		url: "#",
-	},
 ];
 
 // Brand logos

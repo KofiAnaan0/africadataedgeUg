@@ -1,15 +1,17 @@
 import H2 from "@/components/ui/H2";
 import Main from "@/components/ui/Main";
+import Link from "@/components/ui/NextLink";
 import P from "@/components/ui/P";
 import Section from "@/components/ui/Section";
+import { socialLinks } from "@/data/footerData";
 import React from "react";
 
 const AboutPage = () => {
 	return (
 		<Section>
-			<Main className="py-10">
+			<Main>
 				{/* title */}
-				<H2>About Africa DataEDGE</H2>
+				<H2 className="pt-30 md:pt-10">About Africa DataEDGE</H2>
 
 				<div className="flex flex-col gap-6 max-w-lg mx-auto">
 					{/* description */}
