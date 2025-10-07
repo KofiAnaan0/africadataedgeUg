@@ -20,7 +20,7 @@ export const navLinks = [
 	{
 		id: 3,
 		label: "Get to Know Us",
-		url: "#",
+		url: "/about",
 	},
 	{
 		id: 4,
