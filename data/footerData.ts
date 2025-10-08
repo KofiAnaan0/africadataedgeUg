@@ -26,13 +26,13 @@ export const socialLinks: SocialLink[] = [
 export const companyData: FooterProps[] = [
 	{
 		id: 1,
-		label: "Contact",
-		links: "#",
+		label: "Our Products",
+		links: "/product",
 	},
 	{
 		id: 2,
 		label: "About Us",
-		links: "#",
+		links: "/about",
 	},
 ];
 
@@ -40,26 +40,26 @@ export const productData: FooterProps[] = [
 	{
 		id: 1,
 		label: "Enterprise Service Management",
-		links: "#",
+		links: "/product#enterprise-management",
 	},
 	{
 		id: 2,
 		label: "Security Information & Events Management",
-		links: "#",
+		links: "/product#iam",
 	},
 	{
 		id: 3,
 		label: "Unified Endpoint Management & Security",
-		links: "#",
+		links: "/product#endpoint-management",
 	},
 	{
 		id: 4,
 		label: "IT Operations Management",
-		links: "#",
+		links: "/product#",
 	},
 	{
 		id: 5,
 		label: "Advanced IT Analytics",
-		links: "#",
+		links: "/product#analytics",
 	},
 ];

@@ -39,8 +39,11 @@ const ApproachCard = ({
 
 					{/* CTA */}
 					<div className="flex items-start justify-start w-full mt-8 space-x-4">
-						<Link href={`/product#${index}`}>
-							<Button>View Product</Button>
+						<Link
+							href={`/product#${index}`}
+							className="inline-flex justify-center items-center font-medium rounded-sm shadow-lg shadow-black/30 text-sm px-4 py-2 h-10 text-white hover:shadow-xl hover:shadow-black/60 hover:rotate-1 hover:scale-110 transform transition-all duration-150 disabled:pointer-events-none cursor-pointer w-full md:w-fit bg-[#10316B] text-white focus:outline-none"
+						>
+							View Products
 						</Link>
 						<Button
 							variant="outline"
