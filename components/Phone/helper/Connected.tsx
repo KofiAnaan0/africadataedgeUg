@@ -3,13 +3,12 @@ import { RoomAudioRenderer } from "@livekit/components-react";
 import { motion } from "motion/react";
 import React from "react";
 import Transcription from "./Transcription";
-import ControlBar from "@/components/Livekit/ControlBar";
 
-interface props {
-  onConnectButtonClicked: () => void;
-}
+// interface props {
+//   onConnectButtonClicked: () => void;
+// }
 
-const Connected = ({ onConnectButtonClicked }: props) => {
+const Connected = () => {
   return (
     <>
       <motion.div
@@ -24,9 +23,9 @@ const Connected = ({ onConnectButtonClicked }: props) => {
         <div className="flex-1 w-full">
           <Transcription />
         </div>
-        <div className="w-full">
+        {/* <div className="w-full">
           <ControlBar onConnectButtonClicked={onConnectButtonClicked} />
-        </div>
+        </div> */}
         <RoomAudioRenderer />
       </motion.div>
     </>

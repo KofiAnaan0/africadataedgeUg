@@ -34,7 +34,7 @@ export default function ChatWidget({
       case "connecting":
         return <Dail />;
       default:
-        return <Connected onConnectButtonClicked={onConnectButtonClicked} />;
+        return <Connected />;
     }
   };
 
@@ -47,8 +47,8 @@ export default function ChatWidget({
       }
     };
 
-    window.addEventListener('openChatWidget', handleOpenWidget);
-    return () => window.removeEventListener('openChatWidget', handleOpenWidget);
+    window.addEventListener("openChatWidget", handleOpenWidget);
+    return () => window.removeEventListener("openChatWidget", handleOpenWidget);
   }, [isOpen, onConnectButtonClicked]);
 
   return (
@@ -85,14 +85,14 @@ export default function ChatWidget({
       {/* Chat Modal with Animation */}
       {isOpen && (
         <div
-          className={`fixed bottom-24 right-6 w-80 sm:w-96 bg-white rounded-2xl shadow-2xl z-50 overflow-hidden flex flex-col transition-all duration-300 ease-out ${
+          className={`fixed bottom-24 right-6 w-80 sm:w-96 h-[450px] bg-white rounded-2xl shadow-2xl z-50 flex flex-col transition-all duration-300 ease-out ${
             isOpen
               ? "opacity-100 translate-y-0 scale-100"
               : "opacity-0 translate-y-4 scale-95"
           }`}
         >
           {/* Header */}
-          <div className="px-6 py-4 flex items-center justify-between">
+          <div className="px-6 py-4 flex items-center justify-between flex-shrink-0 border-b border-gray-100">
             <div className="flex items-center gap-3">
               <div>
                 <h3 className="text-blue-600 font-semibold text-sm">
@@ -104,19 +104,19 @@ export default function ChatWidget({
             <button
               onClick={handleOverlayClick}
               aria-label="Close chat"
-              className="text-white hover:bg-white/20 rounded-full p-1.5 transition-colors"
+              className="text-gray-400 hover:text-gray-600 rounded-full p-1.5 transition-colors"
             >
               <X className="w-4 h-4" />
             </button>
           </div>
 
           {/* Content Area */}
-          <div className="flex-1 min-h-[350px] max-h-[200px]">
+          <div className="flex-1 min-h-0 overflow-hidden">
             {renderContent()}
           </div>
 
           {/* Footer */}
-          <div className="bg-gray-50 px-6 py-3 border-t border-gray-200">
+          <div className="bg-gray-50 px-6 py-3 border-t border-gray-200 flex-shrink-0">
             <p className="text-gray-500 text-xs text-center">
               Powered by{" "}
               <a
